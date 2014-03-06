@@ -1,0 +1,15 @@
+language: python
+env:
+  - TOXENV=py33
+  - TOXENV=py26
+  - TOXENV=py27
+  - TOXENV=pep8
+
+install:
+  - pip install --upgrade 'tox>=1.6,<1.7'
+script:
+  - tox
+
+notifications:
+  irc:
+    - "chat.freenode.net#opendaylight-dlux"
